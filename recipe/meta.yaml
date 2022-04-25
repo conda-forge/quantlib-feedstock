@@ -12,17 +12,18 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - boost-cpp
 
 requirements:
   build:
-    - cmake
-    - make  # [unix]
-    - pkg-config  # [unix]
     - {{ compiler('cxx') }}
+    - autoconf
+    - automake 
+    - cmake 
+    - make
   host:
     - boost-cpp
   run:
