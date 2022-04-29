@@ -1,2 +1,11 @@
+copy /y %RECIPE_DIR%\Platform.cmake %SRC_DIR%\cmake
 
-msbuild QuantLib.sln /m /p:Configuration=Release /p:Platform=x64 /p:IncludePath="%PREFIX%\Library\include;$(IncludePath)" /p:OutDir="%PREFIX%\Library\"
+cmake -G "NMake Makefiles" -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% -D BUILD_SHARED_LIBS=ON -D Boost_USE_STATIC_LIBS=OFF -D Boost_USE_STATIC_RUNTIME=OFF -D QL_BUILD_EXAMPLES=OFF -D QL_BUILD_BENCHMARK=OFF %SRC_DIR%
+if errorlevel 1 exit 1
+
+nmake
+if errorlevel 1 exit 1
+
+nmake install
+if errorlevel 1 exit 1
+
