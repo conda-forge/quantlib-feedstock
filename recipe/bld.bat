@@ -8,3 +8,8 @@ if errorlevel 1 exit 1
 
 nmake install
 if errorlevel 1 exit 1
+
+dir %PREFIX\Library
+dir %PREFIX\Library\bin
+dir %PREFIX\Library\lib
+%PREFIX%\Library\bin\QuantLib-test-suite-x64-mt.exe --log_level=message --build_info=yes -- --faster  # [win]
