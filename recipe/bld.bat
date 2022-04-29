@@ -7,6 +7,6 @@
 @REM nmake install
 @REM if errorlevel 1 exit 1
 
-msbuild QuantLib.sln /m /p:Configuration=Release
+msbuild QuantLib.sln /m /p:Configuration=Release /p:IncludePath="C:\Miniconda\include;$(IncludePath)"
 
 .\test-suite\bin\QuantLib-test-suite-x64-mt.exe --log_level=message --build_info=yes -- --faster
