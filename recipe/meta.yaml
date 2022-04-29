@@ -32,7 +32,8 @@ requirements:
 test:
   commands:
     - cd build && ./test-suite/quantlib-test-suite --log_level=message  # [unix]
-    - .\test-suite\bin\QuantLib-test-suite-x64-mt.exe --log_level=message --build_info=yes -- --faster  # [win]
+    - dir %PREFIX%\Library  # [win]
+    - %PREFIX%\Library\bin\QuantLib-test-suite-x64-mt.exe --log_level=message --build_info=yes -- --faster  # [win]
 
 about:
   home: https://github.com/lballabio/QuantLib
