@@ -1,3 +1,6 @@
+dir %PREFIX%\Library
+dir %PREFIX%\Library\lib
+
 copy /y %RECIPE_DIR%\Platform.cmake %SRC_DIR%\cmake
 copy /y %RECIPE_DIR%\Build.props %SRC_DIR%\
 
