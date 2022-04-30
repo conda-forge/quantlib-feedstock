@@ -1,4 +1,5 @@
 copy /y %RECIPE_DIR%\Platform.cmake %SRC_DIR%\cmake
+copy /y %RECIPE_DIR%\Build.props %SRC_DIR%\
 
 msbuild /p:Configuration=Release /p:Platform=x64 /m %SRC_DIR%
 if errorlevel 1 exit 1
