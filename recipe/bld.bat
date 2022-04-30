@@ -7,6 +7,9 @@ copy /y %RECIPE_DIR%\Build.props %SRC_DIR%\
 msbuild /p:Configuration=Release /p:Platform=x64 /m %SRC_DIR%
 if errorlevel 1 exit 1
 
+.\test-suite\bin\QuantLib-test-suite-x64-mt.exe --log_level=message --build_info=yes
+if errorlevel 1 exit 1
+
 @REM REM file is malformed for some reason
 @REM copy /y %RECIPE_DIR%\quantlib.hpp %SRC_DIR%\%PREFIX%\Library\include\ql
 

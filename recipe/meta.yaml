@@ -15,7 +15,7 @@ build:
   number: 3
   skip: true  # [win and vc<14]
   run_exports:
-    - boost-cpp
+    - boost
 
 requirements:
   build:
@@ -25,9 +25,9 @@ requirements:
     - cmake 
     - make  # [unix]
   host:
-    - boost-cpp
+    - boost
   run:
-    - boost-cpp
+    - boost
 
 test:
   commands:
