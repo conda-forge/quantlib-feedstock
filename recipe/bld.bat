@@ -9,6 +9,8 @@ if errorlevel 1 exit 1
 cmake --install %SRC_DIR% --config Release
 if errorlevel 1 exit 1
 
-mkdir -p %PREFIX%\Library\bin
+REM file is malformed for some reason
+copy /y %RECIPE_DIR%\quantlib.hpp %SRC_DIR%\%PREFIX%\Library\include\ql
+
 copy /y %SRC_DIR%\ql\Release\QuantLib-x64-mt.dll %PREFIX%\Library\bin
 copy /y %SRC_DIR%\ql\Release\QuantLib-x64-mt.exp %PREFIX%\Library\bin
