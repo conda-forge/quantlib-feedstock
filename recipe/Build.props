@@ -6,7 +6,6 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(PREFIX)\Library\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(PREFIX)\Library\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
