@@ -12,10 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
   run_exports:
-    - boost-cpp
+    - pin_compatible('quantlib', max_pin='x')
 
 requirements:
   build:
