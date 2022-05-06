@@ -15,7 +15,7 @@ build:
   number: 4
   skip: true  # [win and vc<14]
   run_exports:
-    - quantlib
+    - {{ pin_compatible('quantlib', max_pin='x') }}
 
 requirements:
   build:
