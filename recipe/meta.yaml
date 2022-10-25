@@ -1,6 +1,6 @@
 {% set name = "QuantLib" %}
-{% set version = "1.27" %}
-{% set sha256 = "5c2cab0f9bbcdcd3ca1b45d7930b3ab7e120857587b6f61c463b2a012a8bc6a7" %}
+{% set version = "1.28" %}
+{% set sha256 = "32de9fba5d64c26d2a592ea14f4a895706338befed8ce72de727084a2de68cfd" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('quantlib', max_pin='x') }}
