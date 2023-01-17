@@ -9,6 +9,5 @@ if errorlevel 1 exit 1
 cmake --install %SRC_DIR% --config Release
 if errorlevel 1 exit 1
 
-mkdir -p %PREFIX%\Library\bin
-copy /y %SRC_DIR%\ql\Release\QuantLib-x64-mt.dll %PREFIX%\Library\bin
-copy /y %SRC_DIR%\ql\Release\QuantLib-x64-mt.exp %PREFIX%\Library\bin
+copy /y %SRC_DIR%\ql\Release\QuantLib-x64-mt-s.dll %PREFIX%\Library\bin
+copy /y %SRC_DIR%\ql\Release\QuantLib-x64-mt-s.exp %PREFIX%\Library\bin
