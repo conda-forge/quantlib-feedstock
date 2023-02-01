@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('quantlib', max_pin='x') }}
@@ -24,6 +24,7 @@ requirements:
     - automake  # [unix]
     - cmake
     - make  # [unix]
+    - ninja  # [win]
   host:
     - boost-cpp
   run:
@@ -31,6 +32,7 @@ requirements:
 
 test:
   commands:
+    - quantlib-test-suite --log_level=message  # [win]
     - cd build && ./test-suite/quantlib-test-suite --log_level=message  # [unix]
 
 about:
