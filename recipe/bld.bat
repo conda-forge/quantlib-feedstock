@@ -1,3 +1,5 @@
+touch ql/experimental/amortizingbonds/all.hpp
+
 mkdir build
 cd build
 
