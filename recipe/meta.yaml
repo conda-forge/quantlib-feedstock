@@ -1,6 +1,5 @@
 {% set name = "QuantLib" %}
-{% set version = "1.29" %}
-{% set sha256 = "b8127fb6fe5562dfabfcb7d62df4ba2f018de39d7fbe7df2b7a688578516b4b7" %}
+{% set version = "1.31.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +7,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/lballabio/QuantLib/releases/download/{{ name }}-v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 13b5346217153ae3c185e0c640cc523a1a6522c3a721698b2c255fd9a1a15a68
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('quantlib', max_pin='x') }}  # [not win]
