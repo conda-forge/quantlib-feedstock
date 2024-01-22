@@ -1,5 +1,5 @@
 {% set name = "QuantLib" %}
-{% set version = "1.32" %}
+{% set version = "1.33" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef2d374ef8c320572dd4b32946da368b2dcdac41e2b87e3e9538a894efe5a6ca
+  sha256: 4810d789261eb36423c7d277266a6ee3b28a3c05af1ee0d45544ca2e0e8312bd
 
 build:
   number: 0
