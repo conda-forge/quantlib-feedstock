@@ -10,7 +10,7 @@ source:
   url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4810d789261eb36423c7d277266a6ee3b28a3c05af1ee0d45544ca2e0e8312bd
   patches:
-    - 0001-link-against-dynamic-boost-test-lib.patch
+    - 0001-Remove-use-of-BOOST_ALL_DYN_LINK.patch
 
 build:
   number: 0
