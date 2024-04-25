@@ -9,8 +9,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: eb87aa8ced76550361771e167eba26aace018074ec370f7af49a01aa56b2fe50
-  patches:
-    - 0001-Remove-use-of-BOOST_ALL_DYN_LINK.patch
 
 build:
   number: 0
