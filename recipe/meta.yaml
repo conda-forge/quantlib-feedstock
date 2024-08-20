@@ -11,7 +11,7 @@ source:
   sha256: eb87aa8ced76550361771e167eba26aace018074ec370f7af49a01aa56b2fe50
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('quantlib', max_pin='x') }}  # [not win]
