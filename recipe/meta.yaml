@@ -9,6 +9,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: a0eff3d420cc26c21ab8e55d3fd169448abe631a0fbc9f528a6ac444227824fa
+  patches:
+    - patches/0001-enable-windows-dll.diff
 
 build:
   number: 0
