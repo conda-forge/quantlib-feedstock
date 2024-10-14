@@ -1,0 +1,30 @@
+From e034a4dddf093eb7c6f78702217c478133538c8b Mon Sep 17 00:00:00 2001
+From: Tim Paine <3105306+timkpaine@users.noreply.github.com>
+Date: Mon, 14 Oct 2024 09:31:08 -0700
+Subject: [PATCH] enable windows dll
+
+---
+ cmake/Platform.cmake | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/cmake/Platform.cmake b/cmake/Platform.cmake
+index 1377466..53a604a 100644
+--- a/cmake/Platform.cmake
++++ b/cmake/Platform.cmake
+@@ -7,14 +7,6 @@ if (MSVC)
+             "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+     endif()
+ 
+-    # Export all symbols so MSVC can populate the .lib and .dll
+-    if (BUILD_SHARED_LIBS)
+-        # Temp: disable DLL builds on MSVC
+-        message(FATAL_ERROR
+-            "Shared library (DLL) builds for QuantLib on MSVC are not supported")
+-        set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+-    endif()
+-
+     add_compile_definitions(NOMINMAX)
+ 
+     # caused by ql\time\date.cpp: warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead.
+-- 
+2.46.1
