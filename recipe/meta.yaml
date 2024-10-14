@@ -34,7 +34,7 @@ requirements:
 test:
   commands:
     - cd build && ./test-suite/quantlib-test-suite --log_level=message  # [unix]
-    # reenable when ready: - quantlib-test-suite --log_level=message  # [win]
+    - quantlib-test-suite --log_level=message  # [win]
 
 about:
   home: https://github.com/lballabio/QuantLib
