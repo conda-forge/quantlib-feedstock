@@ -20,7 +20,7 @@ index 1377466..53a604a 100644
 -        # Temp: disable DLL builds on MSVC
 -        message(FATAL_ERROR
 -            "Shared library (DLL) builds for QuantLib on MSVC are not supported")
--        set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+         set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 -    endif()
 -
      add_compile_definitions(NOMINMAX)
