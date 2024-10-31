@@ -1,0 +1,24 @@
+From 0ae47e6a29f98fa7bd84f006dfc005c9009df788 Mon Sep 17 00:00:00 2001
+From: Isuru Fernando <ifernando@quansight.com>
+Date: Mon, 28 Oct 2024 15:11:35 -0500
+Subject: [PATCH] Remove use of BOOST_ALL_DYN_LINK
+
+Since we are using header only parts using BOOST_ALL_NO_LIB
+---
+ test-suite/CMakeLists.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/test-suite/CMakeLists.txt b/test-suite/CMakeLists.txt
+index 39ab5081e4..333380232b 100644
+--- a/test-suite/CMakeLists.txt
++++ b/test-suite/CMakeLists.txt
+@@ -185,9 +185,6 @@ set(QL_TEST_HEADERS
+ 
+ if (QL_BUILD_TEST_SUITE)
+     add_library(ql_test OBJECT ${QL_TEST_SOURCES} ${QL_TEST_HEADERS})
+-    if (NOT Boost_USE_STATIC_LIBS)
+-        target_compile_definitions(ql_test PUBLIC BOOST_ALL_DYN_LINK)
+-    endif()
+     if(MSVC AND CMAKE_UNITY_BUILD)
+         # for Unity builds, we need to add /bigobj
+         target_compile_options(ql_test PUBLIC "/bigobj")
