@@ -1,0 +1,25 @@
+From c34805232eadf344ddc028a56f48ebe4bfb54ed5 Mon Sep 17 00:00:00 2001
+From: Tim Paine <3105306+timkpaine@users.noreply.github.com>
+Date: Thu, 24 Jul 2025 09:59:27 -0400
+Subject: [PATCH] automake 17
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index 3b06e25..b9829c2 100755
+--- a/configure
++++ b/configure
+@@ -3134,7 +3134,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ ac_config_headers="$ac_config_headers ql/config.hpp"
+ 
+-am__api_version='1.18'
++am__api_version='1.17'
+ 
+ 
+ 
+-- 
+2.49.0
+
