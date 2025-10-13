@@ -1,5 +1,5 @@
 {% set name = "QuantLib" %}
-{% set version = "1.39" %}
+{% set version = "1.40" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0126dac9fab908ca3df411ec8eb888ea1932c1044b1036d6df2f8159451fb700
+  url: https://github.com/lballabio/QuantLib/archive/v{{ version }}.tar.gz
+  sha256: 8fe4257dbe4e5c75afdb699d72a2f25932252ebb5e181aff0d359884e43bafeb
   patches:
     - 0001-Remove-use-of-BOOST_ALL_DYN_LINK.patch
     - 0002-automake-17.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage('quantlib', max_pin='x') }}  # [not win]
