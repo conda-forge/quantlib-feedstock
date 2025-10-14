@@ -7,8 +7,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/lballabio/QuantLib/archive/v{{ version }}.tar.gz
-  sha256: 8fe4257dbe4e5c75afdb699d72a2f25932252ebb5e181aff0d359884e43bafeb
+  url: https://github.com/lballabio/QuantLib/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5d6b971b998b8b47e5694dfc4851e9c8809624ff24c620579efc7fedef9dc149
   patches:
     - 0001-Remove-use-of-BOOST_ALL_DYN_LINK.patch
     - 0002-automake-17.patch
