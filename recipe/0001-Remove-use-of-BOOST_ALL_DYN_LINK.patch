@@ -9,10 +9,10 @@ Since we are using header only parts using BOOST_ALL_NO_LIB
  1 file changed, 3 deletions(-)
 
 diff --git a/test-suite/CMakeLists.txt b/test-suite/CMakeLists.txt
-index 39ab5081e4..333380232b 100644
+index 0a3ca24..90c33ad 100644
 --- a/test-suite/CMakeLists.txt
 +++ b/test-suite/CMakeLists.txt
-@@ -185,9 +185,6 @@ set(QL_TEST_HEADERS
+@@ -189,9 +189,6 @@ set(QL_TEST_HEADERS
  
  if (QL_BUILD_TEST_SUITE)
      add_library(ql_test OBJECT ${QL_TEST_SOURCES} ${QL_TEST_HEADERS})
@@ -22,3 +22,6 @@ index 39ab5081e4..333380232b 100644
      if(MSVC AND CMAKE_UNITY_BUILD)
          # for Unity builds, we need to add /bigobj
          target_compile_options(ql_test PUBLIC "/bigobj")
+-- 
+2.51.0
+
