@@ -8,18 +8,18 @@ Subject: [PATCH] automake 17
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/configure b/configure
-index 3b06e25..b9829c2 100755
+index 8e22d63..67bf193 100755
 --- a/configure
 +++ b/configure
-@@ -3134,7 +3134,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+@@ -3109,7 +3109,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  ac_config_headers="$ac_config_headers ql/config.hpp"
  
--am__api_version='1.18'
+-am__api_version='1.16'
 +am__api_version='1.17'
  
  
  
 -- 
-2.49.0
+2.51.0
 
