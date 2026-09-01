@@ -41,10 +41,7 @@ requirements:
 
 tests:
   - script:
-      - if: win
-        then: quantlib-test-suite --log_level=message
-      - if: unix
-        then: cd build && ./test-suite/quantlib-test-suite --log_level=message
+      - quantlib-test-suite --log_level=message
 
 about:
   license: BSD-3-Clause
