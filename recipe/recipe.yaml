@@ -13,7 +13,6 @@ source:
   sha256: 34d7787a367404447f84be6942b19fd091f1e8e45a380d3f153e6cd8c4bb8ad8
   patches:
     - 0001-Remove-use-of-BOOST_ALL_DYN_LINK.patch
-    - 0002-automake-17.patch
 
 build:
   number: 0
@@ -27,6 +26,7 @@ requirements:
       then:
         - autoconf
         - automake
+        - libtool
     - cmake
     - if: unix
       then: make

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 #cmake ${CMAKE_ARGS} -DCMAKE_BUILD_TYPE=Release     \
 #      -DCMAKE_INSTALL_PREFIX=$PREFIX \
 #      -DCMAKE_INSTALL_LIBDIR=lib     \
@@ -9,7 +11,7 @@
 #      $SRC_DIR
 
 
-./autogen.sh
+autoreconf --force --install
 ./configure --disable-static CXXFLAGS="-O2 -g0 -Wall -Wno-unknown-pragmas -Werror" --prefix $PREFIX
 make
 make install
