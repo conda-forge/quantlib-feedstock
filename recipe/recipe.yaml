@@ -15,7 +15,7 @@ source:
     - 0001-Remove-use-of-BOOST_ALL_DYN_LINK.patch
 
 build:
-  number: 0
+  number: 1
   skip: win and vc<14
 
 requirements:
@@ -37,7 +37,7 @@ requirements:
   run:
   run_exports:
     - if: not win
-      then: ${{ pin_subpackage('quantlib', upper_bound='x') }}
+      then: ${{ pin_subpackage('quantlib', upper_bound='x.x') }}
 
 tests:
   - script:
